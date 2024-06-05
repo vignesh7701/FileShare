@@ -1,7 +1,9 @@
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
+import {  neobrutalism, shadesOfBlue } from "@clerk/themes";
 
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Fileshare App",
@@ -10,8 +12,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        baseTheme: [ neobrutalism],
+        variables: { colorPrimary: "black" },
+        signIn: {
+          baseTheme: [shadesOfBlue],
+          variables: { colorPrimary: "black" },
+        }
+      }}
+    >
+      <html lang="en">
+        <body className={outfit.className}>{children}</body>
+      </html>
+    </ClerkProvider>
   );
 }

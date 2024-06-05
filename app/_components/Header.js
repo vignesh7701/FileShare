@@ -10,7 +10,7 @@ function Header() {
   ];
 
   return (
-    <div>
+    <div >
       <header className="bg-white">
         <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
           <Image src="/logo.svg" alt="Logo" width={65} height={60} />
@@ -35,17 +35,12 @@ function Header() {
               <div className="sm:flex sm:gap-4">
                 <a
                   className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition  hover:bg-primary/90 sm:block"
-                  href="#"
+                  href="/files"
                 >
                   Get Started
                 </a>
 
-                <a
-                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-primary transition hover:bg-slate-100 text-black sm:block"
-                  href="#"
-                >
-                  Register
-                </a>
+                
               </div>
 
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">

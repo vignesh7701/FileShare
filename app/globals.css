@@ -8,3 +8,7 @@ body {
 }
 
 
+.primaryColor {
+  background-color: rgb(170, 103, 20);
+  color: black;
+}
