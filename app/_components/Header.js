@@ -3,10 +3,9 @@ import React from "react";
 
 function Header() {
   const menuItems = [
-    { label: "Home", href: "#" },
-    { label: "Upload", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Contact Us", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "Upload", href: "upload" },
+    { label: "About", href: "about" },
   ];
 
   return (
@@ -32,16 +31,7 @@ function Header() {
             </nav>
 
             <div className="flex items-center gap-4">
-              <div className="sm:flex sm:gap-4">
-                <a
-                  className="block rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-white transition  hover:bg-primary/90 sm:block"
-                  href="/files"
-                >
-                  Get Started
-                </a>
-
-                
-              </div>
+             
 
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
                 <span className="sr-only">Toggle menu</span>
